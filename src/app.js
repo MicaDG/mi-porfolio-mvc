@@ -4,6 +4,7 @@ const main = require("./routers/main");
 
 const port = 3000;
 
+app.use(express.static("public"));
 app.use("/", main);
 
 app.listen( port, () => console.log("Servidor funcionando en el puerto " + port));
